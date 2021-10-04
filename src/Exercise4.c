@@ -24,6 +24,20 @@ int main(int argc, char *argv[]) {
 	int height = atoi(argv[1]);
 	int border = atoi(argv[2]);
 	//Your codes here
-	
+	int j;
+	for(int i = 1; i <= height; i++) {
+		for(j = i; j < height; j++) {
+			printf(" ");
+		}
+		for(j = 1; j <= (2*i - 1); j++) {
+			if((i == height) || (j == 1) || (j == (2*i - 1)) || (i == (height - border + 1))) {
+				printf("*");
+			}
+			else {
+				printf(" ");
+			}
+		}
+		printf("\n");
+	}
 	return 0;
 }
